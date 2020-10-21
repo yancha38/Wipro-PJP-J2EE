@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PJP Module-Javascript</title>
+</head>
+<body>
+<table align="center">
+	<tr>
+		<th>Enter a String:</th>
+		<td><input type="text" name="string" id="string" required></td>
+	</tr>
+</table>
+<h5 align="center"><button onclick="capitalizeLetter()">Click to Capitalize</button></h5>
+<h3 id="print" style="color: green; text-align: center;"></h3>
+<script language="Javascript">
+	function capitalizeLetter()
+    {
+        var str = document.getElementById("string").value;
+        var x = document.getElementById("print");
+        var array = str.split(' ');
+        var newarray = [];
+        for(var i = 0; i < array.length; i++){
+        	newarray.push(array[i].charAt(0).toUpperCase() +
+        		array[i].slice(1));
+        }
+        x.innerHTML = newarray.join(' ');
+    }
+</script>
+</body>
+</html>
