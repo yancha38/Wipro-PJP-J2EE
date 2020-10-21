@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PJP Module-JavaScript</title>
+</head>
+<body>
+<table>
+	<tr>
+		<th>Enter a number:</th>
+		<td><input type="number" name="number" id="num" required></td>
+		<td><button onclick="reverseNum()">Submit</button></td>
+	</tr>
+</table>
+<script language="Javascript">
+		function reverseNum(){
+		    var rev = 0;
+		    x = document.getElementById("num").value;
+		    while(x){
+		       var rem = (x % 10);
+		       rev = (rev * 10) + rem;
+		       x = (x / 10 | 0);
+	    }
+	        document.write("Output=" +rev);
+   }
+</script>
+</body>
+</html>
