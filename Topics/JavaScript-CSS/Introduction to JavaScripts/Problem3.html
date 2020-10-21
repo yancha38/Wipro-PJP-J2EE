@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PJP Module-JavaScript</title>
+</head>
+<body>
+<table align="center">
+	<tr>
+		<th>Enter a String:</th>
+		<td><input type="text" name="string" id="string" required></td>
+		<td><button onclick="isPalindrome()">Submit</button></td>
+	</tr>
+</table>
+<script language="Javascript" type="text/javascript">
+
+	function isPalindrome(){
+		var re = /[^a-zA-Z0-9]/g;
+		var str = document.getElementById("string").value;
+		var lowRegStr = str.toLowerCase().replace(re, '');
+		var reverseStr = lowRegStr.split('').reverse().join(''); 
+        if(reverseStr === lowRegStr){
+        	document.write(str + " is Palindrome");
+        }
+        else alert(str +" is not Palindrome");
+	}
+</script>
+</body>
+</html>
